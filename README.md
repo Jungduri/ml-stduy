@@ -10,8 +10,8 @@ TBA
 
 ## Schedule
 
-| Weeks | Subject | Duration |Assignee|
-| ------ | ------ | ------ |
+| Weeks | Subject | Duration |Assignee| 
+| ------ | ------ | ------ | ------ |
 |1| Motivation and basics | 75 | jungduri / gwleeee |
 |2| Fundamentals of machine learning | 98 | TBD |
 |3| Naive Bayes Classifier | 71 | TBD |
