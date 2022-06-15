@@ -102,7 +102,7 @@ $$P(\theta|D) \propto P(D|\theta)P(\theta)$$
 * 즉, 사후 확률을 크게 만드는 확률 $\theta$를 구하면, 관측한 데이터가 발생한 특정 확률 모델을 알 수 있음
 * 확률 변수 $\theta$의 확률 분포를 *Beta distribution* 이라고 가정 하면,
 > *Beta distribution* : 0과 1사이에 확률밀도가 양인 연속 확률 분포  
-> <img src=https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Beta_distribution_cdf.svg/270px-Beta_distribution_cdf.svg.png>
+> ![beta_dist](270px-Beta_distribution_cdf.svg.png)
 > $$P(\theta)=\frac{\theta^{\alpha-1}{(1-\theta)}^{\beta-1}}{B(\alpha,\beta)}$$
 > $$B(\alpha,\beta)=\frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}, \Gamma(\alpha)=(\alpha-1)!$$
 
