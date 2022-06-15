@@ -67,15 +67,15 @@ $\therefore \; P(D| \theta) =\theta^{ a_H} (1-\theta)^a_T$
 > 가정 = 확률분포 = P
 > 관측한 데이터 = observatoin = D
 > 실험을 통해 얻어진 observation이 등장하는 확률이 최대가 되는 특정 모델($\hat{\theta}$)을 찾는 것이 목표
-* 즉, 아래 수식을 만족하는 $\hat{\theta}$를 찾는 것이 목적
-$$ \hat{\theta} =\argmax\limits_{\theta}P(D|\theta)  $$
+* 즉, 아래 수식을 만족하는 $\hat{\theta}$를 찾는 것이 목적  
+$$ \hat{\theta} =\argmax\limits_{\theta}P(D|\theta) $$
 
 * 편의를 위해 로그를 적용  
-$\hat{\theta} = \argmax\limits_{\theta}P(D|\theta)$
- $\quad = \argmax\limits_{\theta} \{ a_H \ln \theta + a_T \ln (1-\theta) \}$
+$\hat{\theta} = \argmax\limits_{\theta}P(D|\theta)$  
+$\quad = \argmax\limits_{\theta} \{ a_H \ln \theta + a_T \ln (1-\theta) \}$
 
 * minima를 찾기 위해서 derivative  
-$\cfrac{d}{d\theta} ( a_H \ln \theta + a_T \ln (1-\theta) ) = 0$ 
+$\cfrac{d}{d\theta} ( a_H \ln \theta + a_T \ln (1-\theta) ) = 0$  
 $\therefore \; \hat{\theta} = \cfrac{a_H}{a_H + a_T}$
 
 * 시행을 더 진행해서 50번을 하였다. 이때 어떤 변화가 생김?
@@ -87,7 +87,7 @@ $$ P(|\hat{\theta} - \theta^*|  \geq e) \leq 2e^{-2Ne^2}$$
 
 ## Maximum a Posteriori Estimation (MAP)
 
-* *MLE 말고 다른 관점에서 $\hat{\theta}$를 찾아보자*
+* *MLE 말고 다른 관점에서* $\hat{\theta}$*를 찾아보자*
 * *다시 압정을 던지는 문제로 들어와서.. Bayes는..*
 * ***사전정보**를 추가해 보자!*
 
@@ -101,9 +101,8 @@ $$P(\theta|D) \propto P(D|\theta)P(\theta)$$
 
 * 즉, 사후 확률을 크게 만드는 확률 $\theta$를 구하면, 관측한 데이터가 발생한 특정 확률 모델을 알 수 있음
 * 확률 변수 $\theta$의 확률 분포를 *Beta distribution* 이라고 가정 하면,
-> *Beta distribution* : 0과 1사이에 확률밀도가 양인 연속 확률 분포
-> beta_dist
-> ![beta_dist](https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Beta_distribution_cdf.svg/270px-Beta_distribution_cdf.svg.png)
+> *Beta distribution* : 0과 1사이에 확률밀도가 양인 연속 확률 분포  
+> <img src=https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Beta_distribution_cdf.svg/270px-Beta_distribution_cdf.svg.png>
 > $$P(\theta)=\frac{\theta^{\alpha-1}{(1-\theta)}^{\beta-1}}{B(\alpha,\beta)}$$
 > $$B(\alpha,\beta)=\frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}, \Gamma(\alpha)=(\alpha-1)!$$
 
