@@ -112,7 +112,8 @@ $$P(\theta|D) \propto P(D|\theta)P(\theta)$$
 * 즉, 사후 확률을 크게 만드는 확률 $\theta$를 구하면, 관측한 데이터가 발생한 특정 확률 모델을 알 수 있음
 * 확률 변수 $\theta$의 확률 분포를 *Beta distribution* 이라고 가정 하면,
 > *Beta distribution* : 0과 1사이에 확률밀도가 양인 연속 확률 분포  
-> ![beta_dist](270px-Beta_distribution_cdf.svg.png)
+> <center><img src="405px-Beta_distribution_cdf.svg.png"></center>
+> 
 > $$P(\theta)=\frac{\theta^{\alpha-1}{(1-\theta)}^{\beta-1}}{B(\alpha,\beta)}$$
 > $$B(\alpha,\beta)=\frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}, \Gamma(\alpha)=(\alpha-1)!$$
 
@@ -128,6 +129,55 @@ $$ \hat{\theta} = \frac{a_H + \alpha - 1}{a_H + \alpha + a_T + \beta - 2} $$
 * 위 수식을 자세히 들여다 보면, 관측 데이터의 양이 많아질수록, $\theta$의 beta distribution을 나타내는 상수 $\alpha, \beta$는 무시할 수 있음 $\rarr$ $MAE$ 와 $MAP$ 값은 같아짐
 * 관측한 데이터가 적을때는 MAE와 MAP가 서로 다르기 때문에 주의해야 함
 * MAP에서 추가 정보 (e.g. $\alpha,\beta$)를 적절히 이용한다면 유용함
+
+## Distribution
+
+###### Probability Distribution
+* 확률분포를 나타내는 P라는 함수는 사건과 사건이 발생할 확률 사이의 1:1 대응 함수  
+  $\rarr$ Probability Den Function (확률밀도함수; PDF)
+* Cumulative Distribution Function (누적분포함수; CDF) 는 [0,1]의 치역을 가짐  
+  $\rarr$ PDF의 정의역에 대하여 적분한 꼴
+
+###### Normal Distribution
+<img src="405px-Normal_Distribution_PDF.svg.png"> <img src="405px-Normal_Distribution_CDF.svg.png">
+* mean, variance를 매개변수로 하는 확률분포함수  
+  $$f(x;\mu,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{x-\mu^2}{2\sigma^2}}$$
+  $$Notation:N(\mu,\sigma^2)$$
+  $$Mean:\mu$$
+  $$Variance:\sigma^2$$
+###### Beta Distribution
+<img src="405px-Beta_distribution_pdf.svg.png"> <img src="405px-Beta_distribution_cdf.svg.png">
+* 정의역의 범위를 [0,1]이고, $\alpha, \beta$를 매개변수로 하는 확률분포
+* 확률을 모델링 할 때 매우 좋음  
+  $\because$ 확률의 범위가 베타분포의 정의역과 동일
+$$B(\theta; \alpha,\beta)=\frac{\theta^{\alpha-1}{(1-\theta)}^{\beta-1}}{B(\alpha,\beta)}$$
+$$B(\alpha,\beta)=\frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}$$
+$$\Gamma(\alpha)=(\alpha-1)!$$
+$$Notation:Beta(\alpha,\beta)$$
+$$Mean:\frac{\alpha}{\alpha+\beta}$$
+$$Variance:\frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}$$
+
+###### Binomial Distribution
+<img src="Binomial_distribution_pmf.svg.png"> <img src="405px-Binomial_distribution_cdf.svg.png">
+* 사건의 결과가 두가지 경우 밖에 없는 확률 분포
+  * (0, 1), (yes, no), (true, false)
+* 시행 횟수 n과 사건의 결과가 한쪽일 확률 p를 매개변수로 함
+$$f(\theta;n,p)={n \choose k}p^k(1-p)^{n-k}$$
+$${n \choose k}=\frac{n!}{k!(n-k)!}$$
+$$Notation:B(n,p)$$
+$$Mean:np$$
+$$Variance:np(1-p)$$
+* ${n \choose k}$는 이항계수 이며 n개 중 k개를 고르는 경우의 수를 의미 함
+  * 중학생 때 배운 $_nC_k$
+* Binomial Distribution의 특수한 사례로 Bernoulli Distribution이 있음
+  * 시행회수 n이 1로 제한 되며, 사건의 결과는 (0,1)
+###### Multinomial Distribution
+* 사건의 결과, 즉 선택지가 여러가지인 경우의 이산 확률 분포
+* 시행 횟수 n과 각 선택지에 대한 확률 $p_i$를 매개변수로 함
+$$f(x_1,...,x_k;n,p_1,...,p_k)=\frac{n!}{x_1!..._k!}p_1^{x_1}...p_k^{x_k}$$
+$$Notation:Mult(P), P=<p_1,...,p_k>$$
+$$Mean:E(x_i)=np_i$$
+$$Variance:Var(x_i)=np_i(1-p_i)$$
 
 ----
 ### References
