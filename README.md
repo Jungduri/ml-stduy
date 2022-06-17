@@ -1,7 +1,8 @@
-# ml-stduy
+# ml-study
 
 카이스트 산업및시스템공학과 문일철 교수님의 
 Introduction to Artificial Intelligence/Machine Learning 스터디를 위한 레포입니다.
+
 https://aai.kaist.ac.kr/xe2/courses
 
 ## Contributors
