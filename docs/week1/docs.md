@@ -145,6 +145,7 @@ $$ \hat{\theta} = \frac{a_H + \alpha - 1}{a_H + \alpha + a_T + \beta - 2} $$
   $$Notation:N(\mu,\sigma^2)$$
   $$Mean:\mu$$
   $$Variance:\sigma^2$$
+* **일상생활, 자연현상에서의 측정 가능한 대부분의 것들**은 정규분포를 따름
 ###### Beta Distribution
 <img src="405px-Beta_distribution_pdf.svg.png"> <img src="405px-Beta_distribution_cdf.svg.png">
 * 정의역의 범위를 [0,1]이고, $\alpha, \beta$를 매개변수로 하는 확률분포
@@ -156,6 +157,11 @@ $$\Gamma(\alpha)=(\alpha-1)!$$
 $$Notation:Beta(\alpha,\beta)$$
 $$Mean:\frac{\alpha}{\alpha+\beta}$$
 $$Variance:\frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}$$
+* **베이즈 통계학에서 사전분포 모델**로 이용할 때가 많음
+  * 베타분포는 파라미터 $\alpha, \beta$에 따라서 다양한 형태로 변형 가능하기 때문
+* 베타분포를 정의함에 있어 감마함수가 제법 생소할 수 있는데, factorial 의 superset이라고 생각하면 됨
+  * 정수에서의 정의는 쉬우나, 정수가 아닌 자연수에서, 음수에서의 정의는 매우 어려워짐
+  * 베타분포는 감마함수의 비율로 표현되는 이항계수의 일반화임
 
 ###### Binomial Distribution
 <img src="Binomial_distribution_pmf.svg.png"> <img src="405px-Binomial_distribution_cdf.svg.png">
@@ -182,3 +188,4 @@ $$Variance:Var(x_i)=np_i(1-p_i)$$
 ----
 ### References
 * https://m.blog.naver.com/bsj104/221658918933
+* https://donghwa-kim.github.io/ref_Gamma_beta.html
