@@ -83,39 +83,39 @@ $$VS_{H,D} =\{h \in H \vert \exists s \in S,\exists g \in G ,g \geq h \geq s\}$$
 ### 1.6 Candidate Elimination 알고리즘
 - 가장 일반적인 가설을 서서히 구체화 시키고, 가장 구체적인 가설을 서서히 일반화시켜 두 가설 사이의 Version Space를 찾아내는 알고리즘
 
-    ![candidate_elimination](5_candidate_elimination.png)
+![candidate_elimination](5_candidate_elimination.png)
     
 
-    #### 1.6.1 Candidate Elimination 과정 
+#### 1.6.1 Candidate Elimination 과정 
 
-    ![candidate_elimination_table](6_candidate_elimination_table.png)
+![candidate_elimination_table](6_candidate_elimination_table.png)
 
-    - Candidate Elimination Process 1
-    - 4개의 인스턴스를 이용하여 Specific Boundary를 일반화하고 General Boundary를 구체화 하는 예제 
+- Candidate Elimination Process 1
+- 4개의 인스턴스를 이용하여 Specific Boundary를 일반화하고 General Boundary를 구체화 하는 예제 
 
-    ![candidate_elimination_1](6_candidate_elimination_1.png)
+![candidate_elimination_1](6_candidate_elimination_1.png)
 
-    - $S_0$ : 가장 구체적인 가설
-    - 가장 구체적인 가설이 존재한다면 표에서 첫번째 인스턴스 이용하여 $S_0$을 한 단계 일반화 시켜 $S_1$을 구함 
-    - 그 다음, 두번째 인스턴스 $S_1$을 다시 한번 한 단계 일반화 시켜 $S_2$을 구함 
-    - 두 인스턴스가 각각 다른 값을 가지는 경우는 "?"로 두어 영향을 받지 않도록 설정
-    - 두 인스턴스에서 일치하는 나머지 항목들은 값을 그대로 가져옴
-    - EnjoytSport 결과 값이 Positive인 경우는 $G_0$에 영향을 주지 않으므로 $G_1$과 $G_2$는 업데이트 되지 않음 
-
-
-    - Candidate Elimination Process 2
-
-    ![candidate_elimination_2](6_candidate_elimination_2.png)
-
-    - 세 번째 인스턴스와 같이 나가서 놀지 않는 경우 Negative Case는 $S_2$에는 영향을 주지 않으므로 $S_3$은 업데이트 되지 않음 
-    - 반면 $G_0$은 항상 나가서 노는 가설이기 때문에 이러한 negative 인스턴스의 feature에 대해서는 부정하여 $G_0$을 구체화 시켜야함 
-    - 따라서 이 인스턴스의 Rainy를 부정하는 Sunny로 $G_0$을 구체화 하거나, Cold or Warm or Same으로 구체화가 필요함 
-    - 네 번째 인스턴스는 다시 Positive Case로 돌아옴
-    - Sunny, Warm, High, Strong 등 4개 항목은 $S_3$에 영향을 주지 않음을 알 수 있음 하지만 Cool, Change는 기존 인스턴스와 반대되는 값을 가지기에 $S_4$는 "?"로 설정해야함
-    - 이는 Change에도 불구하고 Positive Case에 해당하므로 $G_3$에서 $G_4$로 업데이트 
+- $S_0$ : 가장 구체적인 가설
+- 가장 구체적인 가설이 존재한다면 표에서 첫번째 인스턴스 이용하여 $S_0$을 한 단계 일반화 시켜 $S_1$을 구함 
+- 그 다음, 두번째 인스턴스 $S_1$을 다시 한번 한 단계 일반화 시켜 $S_2$을 구함 
+- 두 인스턴스가 각각 다른 값을 가지는 경우는 "?"로 두어 영향을 받지 않도록 설정
+- 두 인스턴스에서 일치하는 나머지 항목들은 값을 그대로 가져옴
+- EnjoytSport 결과 값이 Positive인 경우는 $G_0$에 영향을 주지 않으므로 $G_1$과 $G_2$는 업데이트 되지 않음 
 
 
-    ![candidate_elimination_3](6_candidate_elimination_3.png)
+- Candidate Elimination Process 2
+
+![candidate_elimination_2](6_candidate_elimination_2.png)
+
+- 세 번째 인스턴스와 같이 나가서 놀지 않는 경우 Negative Case는 $S_2$에는 영향을 주지 않으므로 $S_3$은 업데이트 되지 않음 
+- 반면 $G_0$은 항상 나가서 노는 가설이기 때문에 이러한 negative 인스턴스의 feature에 대해서는 부정하여 $G_0$을 구체화 시켜야함 
+- 따라서 이 인스턴스의 Rainy를 부정하는 Sunny로 $G_0$을 구체화 하거나, Cold or Warm or Same으로 구체화가 필요함 
+- 네 번째 인스턴스는 다시 Positive Case로 돌아옴
+- Sunny, Warm, High, Strong 등 4개 항목은 $S_3$에 영향을 주지 않음을 알 수 있음 하지만 Cool, Change는 기존 인스턴스와 반대되는 값을 가지기에 $S_4$는 "?"로 설정해야함
+- 이는 Change에도 불구하고 Positive Case에 해당하므로 $G_3$에서 $G_4$로 업데이트 
+
+
+![candidate_elimination_3](6_candidate_elimination_3.png)
 
 
 #### 1.6.2 How to Classify the Next Instance?
