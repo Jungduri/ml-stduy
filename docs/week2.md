@@ -120,7 +120,7 @@ $$VS_{H,D} =\{h \in H \vert \exists s \in S,\exists g \in G ,g \geq h \geq s\}$$
 
 #### 1.6.2 How to Classify the Next Instance?
 
-![asdf](6_asdf.png)
+![candidate_elimination_example](6_candidate_elimination_example.png)
 
 일련의 규칙기반 학습을 통해 위 그림과 같은 Version Space를 얻었다고 가정
 - 첫번째 인스턴스는 구체적인 가설을 만족
