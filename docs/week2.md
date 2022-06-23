@@ -32,7 +32,7 @@
 머신러닝이란 주어진 데이터를 잘 설명하는 approximated function을 찾는 과정
 
 Function Approximation을 이해하기 위한 용어
-- Instance X : 하나의 Example 혹은 관측 집합을 말합니다. 즉 학습에 사용될 데이터
+- Instance X : 하나의 Example 혹은 관측 집합, 즉 학습에 사용될 데이터
 - Training Dataset D : 학습 데이터란 여러 개의 인스턴스를 모아놓은 집합
 - Hypothesis H : 데이터를 "그럴듯하게" 설명할 수 있는 임의의 함수
 - Target Function c : 목표 함수란 주어진 데이터를 통해 추론하고자 하는 정답
