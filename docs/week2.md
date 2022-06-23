@@ -4,8 +4,8 @@
 
 
 ### 1.1 지난 시간 복습
-    - 머신러닝이란? 컴퓨터 프로그램이 특정 업무(Task)를 수행함에 있어서, 평가지표(Performance Measure)가 경험을 통해 개선된다면 이를 "프로그램이 학습한다!"라고 말할 수 있음
-    - 더 많은 경험을 쌓고, 더 많은 데이터를 분석하고, 더 많은 사전 지식을 갖는다면 머신러닝의 성능은 점점 좋아질 수 있음
+- 머신러닝이란? 컴퓨터 프로그램이 특정 업무(Task)를 수행함에 있어서, 평가지표(Performance Measure)가 경험을 통해 개선된다면 이를 "프로그램이 학습한다!"라고 말할 수 있음
+- 더 많은 경험을 쌓고, 더 많은 데이터를 분석하고, 더 많은 사전 지식을 갖는다면 머신러닝의 성능은 점점 좋아질 수 있음
 
 ---
 
@@ -32,10 +32,10 @@
 머신러닝이란 주어진 데이터를 잘 설명하는 approximated function을 찾는 과정
 
 Function Approximation을 이해하기 위한 용어
-- Instance X : 하나의 Example 혹은 관측 집합, 즉 학습에 사용될 데이터
-- Training Dataset D : 학습 데이터란 여러 개의 인스턴스를 모아놓은 집합
-- Hypothesis H : 데이터를 "그럴듯하게" 설명할 수 있는 임의의 함수
-- Target Function c : 목표 함수란 주어진 데이터를 통해 추론하고자 하는 정답
+    - Instance X : 하나의 Example 혹은 관측 집합, 즉 학습에 사용될 데이터
+    - Training Dataset D : 학습 데이터란 여러 개의 인스턴스를 모아놓은 집합
+    - Hypothesis H : 데이터를 "그럴듯하게" 설명할 수 있는 임의의 함수
+    - Target Function c : 목표 함수란 주어진 데이터를 통해 추론하고자 하는 정답
 
 
 #### 1.3.1 Function Approximation의 시각적 표현
@@ -63,14 +63,14 @@ Function Approximation을 이해하기 위한 용어
 
 
 - Instances
-- $x_1$ : < Sunny, Warm, Normal, Strong, Warm, Same >
+    - $x_1$ : < Sunny, Warm, Normal, Strong, Warm, Same >
 
-- $x_2$ : < Sunny, Warm, Normal, **Light**, Warm, Same >
-    - Light라는 새로운 feature 등장 
-    - Learner는 새로운 경험을 배우게 됨(포함 시킴) (e.g. strong 하지 않아도 밖에 나감)
+    - $x_2$ : < Sunny, Warm, Normal, **Light**, Warm, Same >
+        - Light라는 새로운 feature 등장 
+        - Learner는 새로운 경험을 배우게 됨(포함 시킴) (e.g. strong 하지 않아도 밖에 나감)
 
-- $x_4$ : < Sunny, Warm, Normal, Strong, Warm, **Change** >
-    - e.g. 일기예보가 Change 되어도 밖에 나감 
+    - $x_4$ : < Sunny, Warm, Normal, Strong, Warm, **Change** >
+    e.g. 일기예보가 Change 되어도 밖에 나감 
 
 
 - Hypotheses
