@@ -44,15 +44,23 @@
 * 베르누이 시행(Bernoulli trial): 통계학에서 임의의 결과가 '성공' 또는 '실패'의 두 가지 중 하나인 실험을 의미 
 
 * 위의 approach애서 ...
+
 $P(H) = \theta$
+
 $P(T) = 1-\theta  \qquad  \because (Bernoulli \; trial)$
+
 $P(HHTHT) = \theta^3 (1-\theta)^2$
 
 * Let)
+
 $D = HHTHT$
+
 $n = 5$
+
 $k = a_H = 3$
+
 $p = \theta$
+
 $\therefore \; P(D| \theta) =\theta^{ a_H} (1-\theta)^{a_T}$
 
 
@@ -69,20 +77,28 @@ $\therefore \; P(D| \theta) =\theta^{ a_H} (1-\theta)^{a_T}$
 > 관측한 데이터 = observatoin = D
 > 실험을 통해 얻어진 observation이 등장하는 확률이 최대가 되는 특정 모델($\hat{\theta}$)을 찾는 것이 목표
 * 즉, 아래 수식을 만족하는 $\hat{\theta}$를 찾는 것이 목적
+
 $${\hat {\theta }}={\underset {\theta \in \Theta }{\operatorname {arg\;max} }}\,{{P}}(D \,|\mathbf {\theta} )$$
 
 * 편의를 위해 로그를 적용
+
 $\hat{\theta} = {\underset {\theta \in \Theta }{\operatorname {arg\;max} }}\,P(D|\theta)$
+
 $\quad = {\underset {\theta \in \Theta }{\operatorname {arg\;max} }}\, \{ a_H \ln \theta + a_T \ln (1-\theta) \}$
 
 * minima를 찾기 위해서 derivative  
+
 $\cfrac{d}{d\theta} ( a_H \ln \theta + a_T \ln (1-\theta) ) = 0$  
+
 $\therefore \; \hat{\theta} = \cfrac{a_H}{a_H + a_T}$
 
 * 시행을 더 진행해서 50번을 하였다. 이때 어떤 변화가 생김?
   * Hoeffding's inequality 
+
 $$ P(|\hat{\theta} - \theta^*|  \geq e) \leq 2e^{-2Ne^2}$$ 
-  * true값($\theta^*$)과 추정 값 $\hat{\theta}$ 가 오차 범위 안에 들어오는 것은 $N$에 영향을 받음
+
+* true값($\theta^*$)과 추정 값 $\hat{\theta}$ 가 오차 범위 안에 들어오는 것은 $N$에 영향을 받음
+
 따라서 시행을 늘리는 것은 에러 bound를 줄이는 효과가 있음
 
 
@@ -133,13 +149,13 @@ $$ \hat{\theta} = \frac{a_H + \alpha - 1}{a_H + \alpha + a_T + \beta - 2} $$
 
 ## Distribution
 
-###### Probability Distribution
+### Probability Distribution
 * 확률분포를 나타내는 P라는 함수는 사건과 사건이 발생할 확률 사이의 1:1 대응 함수  
-  $\rarr$ Probability Den Function (확률밀도함수; PDF)
+  $\xrightarrow{}$ Probability Den Function (확률밀도함수; PDF)
 * Cumulative Distribution Function (누적분포함수; CDF) 는 [0,1]의 치역을 가짐  
-  $\rarr$ PDF의 정의역에 대하여 적분한 꼴
+  $\xrightarrow{}$ PDF의 정의역에 대하여 적분한 꼴
 
-###### Normal Distribution
+### Normal Distribution
 <img src="405px-Normal_Distribution_PDF.svg.png"> <img src="405px-Normal_Distribution_CDF.svg.png">
 * mean, variance를 매개변수로 하는 확률분포함수  
   $$f(x;\mu,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{x-\mu^2}{2\sigma^2}}$$
@@ -147,7 +163,7 @@ $$ \hat{\theta} = \frac{a_H + \alpha - 1}{a_H + \alpha + a_T + \beta - 2} $$
   $$Mean:\mu$$
   $$Variance:\sigma^2$$
 * **일상생활, 자연현상에서의 측정 가능한 대부분의 것들**은 정규분포를 따름
-###### Beta Distribution
+### Beta Distribution
 <img src="405px-Beta_distribution_pdf.svg.png"> <img src="405px-Beta_distribution_cdf.svg.png">
 * 정의역의 범위를 [0,1]이고, $\alpha, \beta$를 매개변수로 하는 확률분포
 * 확률을 모델링 할 때 매우 좋음  
@@ -164,7 +180,7 @@ $$Variance:\frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}$$
   * 정수에서의 정의는 쉬우나, 정수가 아닌 자연수에서, 음수에서의 정의는 매우 어려워짐
   * 베타분포는 감마함수의 비율로 표현되는 이항계수의 일반화임
 
-###### Binomial Distribution
+### Binomial Distribution
 <img src="Binomial_distribution_pmf.svg.png"> <img src="405px-Binomial_distribution_cdf.svg.png">
 * 사건의 결과가 두가지 경우 밖에 없는 확률 분포
   * (0, 1), (yes, no), (true, false)
@@ -178,7 +194,7 @@ $$Variance:np(1-p)$$
   * 중학생 때 배운 $_nC_k$
 * Binomial Distribution의 특수한 사례로 Bernoulli Distribution이 있음
   * 시행회수 n이 1로 제한 되며, 사건의 결과는 (0,1)
-###### Multinomial Distribution
+### Multinomial Distribution
 * 사건의 결과, 즉 선택지가 여러가지인 경우의 이산 확률 분포
 * 시행 횟수 n과 각 선택지에 대한 확률 $p_i$를 매개변수로 함
 $$f(x_1,...,x_k;n,p_1,...,p_k)=\frac{n!}{x_1!..._k!}p_1^{x_1}...p_k^{x_k}$$
