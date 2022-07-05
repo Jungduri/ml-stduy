@@ -1,4 +1,4 @@
-# ml-study
+#ml-study
 
 카이스트 산업및시스템공학과 문일철 교수님의 
 Introduction to Artificial Intelligence/Machine Learning 스터디를 위한 레포입니다.
@@ -14,7 +14,7 @@ TBA
 | Weeks | Subject | Duration |Assignee| 
 | ------ | ------ | ------ | ------ |
 |1| Motivation and basics | 75 | jungduri / gwleeee |
-|2| Fundamentals of machine learning | 98 | TBD |
+|2| Fundamentals of machine learning | 98 | eehoeskrap / nalinear |
 |3| Naive Bayes Classifier | 71 | TBD |
 |4| Logistic Regression Classifier | 121 | TBD |
 |5| Support Vector Machine Classifier | 117 | TBD |
