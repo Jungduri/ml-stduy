@@ -43,17 +43,18 @@
 * iid: 독립적인 이벤트
 * 베르누이 시행(Bernoulli trial): 통계학에서 임의의 결과가 '성공' 또는 '실패'의 두 가지 중 하나인 실험을 의미 
 
-* 위의 approach애서 ...  
-$P(H) = \theta$  
-$P(T) = 1-\theta  \qquad  \because (Bernoulli \; trial)$  
-$P(HHTHT) = \theta^3 (1-\theta)^2$  
+* 위의 approach애서 ...
+$P(H) = \theta$
+$P(T) = 1-\theta  \qquad  \because (Bernoulli \; trial)$
+$P(HHTHT) = \theta^3 (1-\theta)^2$
 
 * Let)
-$D = HHTHT$  
-$n = 5$  
-$k = a_H = 3$  
-$p = \theta$  
-$\therefore \; P(D| \theta) =\theta^{ a_H} (1-\theta)^a_T$
+$D = HHTHT$
+$n = 5$
+$k = a_H = 3$
+$p = \theta$
+$\therefore \; P(D| \theta) =\theta^{ a_H} (1-\theta)^{a_T}$
+
 
 ### Task definition
 * Data: head와 tail로 구성된 관측된 데이터
@@ -67,12 +68,12 @@ $\therefore \; P(D| \theta) =\theta^{ a_H} (1-\theta)^a_T$
 > 가정 = 확률분포 = P
 > 관측한 데이터 = observatoin = D
 > 실험을 통해 얻어진 observation이 등장하는 확률이 최대가 되는 특정 모델($\hat{\theta}$)을 찾는 것이 목표
-* 즉, 아래 수식을 만족하는 $\hat{\theta}$를 찾는 것이 목적  
-$$ \hat{\theta} =\argmax\limits_{\theta}P(D|\theta) $$
+* 즉, 아래 수식을 만족하는 $\hat{\theta}$를 찾는 것이 목적
+$${\hat {\theta }}={\underset {\theta \in \Theta }{\operatorname {arg\;max} }}\,{{P}}(D \,|\mathbf {\theta} )$$
 
-* 편의를 위해 로그를 적용  
-$\hat{\theta} = \argmax\limits_{\theta}P(D|\theta)$  
-$\quad = \argmax\limits_{\theta} \{ a_H \ln \theta + a_T \ln (1-\theta) \}$
+* 편의를 위해 로그를 적용
+$\hat{\theta} = {\underset {\theta \in \Theta }{\operatorname {arg\;max} }}\,P(D|\theta)$
+$\quad = {\underset {\theta \in \Theta }{\operatorname {arg\;max} }}\, \{ a_H \ln \theta + a_T \ln (1-\theta) \}$
 
 * minima를 찾기 위해서 derivative  
 $\cfrac{d}{d\theta} ( a_H \ln \theta + a_T \ln (1-\theta) ) = 0$  
