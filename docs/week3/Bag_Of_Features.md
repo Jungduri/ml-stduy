@@ -6,16 +6,16 @@
 
 ### Image representation based on the BoW model
 
-![[Pasted image 20220707220920.png]]
+![image1](https://github.com/Jungduri/ml-study/blob/week3/docs/week3/images/Pasted%20image%2020220707220920.png)
 
 1. Feature Extraction and Clustering
-   ![[스크린샷 2022-07-07 오후 10.06.11.png]]
+   ![image2](https://github.com/Jungduri/ml-study/blob/week3/docs/week3/images/스크린샷%202022-07-07%20오후%2010.06.11.png)
 
    - 먼저 영상에서 feature 들을 추출(using SIFT)
      SIFT
      		- 이미지 크기와 회전에 불변하는 특징을 추출하는 알고리즘
      		- 이미지 내에서 위와 같은 환경 변화에 강인한 부분, edge 부분을 찾아 feature로써 추출함
-     		![[Pasted image 20220707223246.png]]
+     		![image3](https://github.com/Jungduri/ml-study/blob/week3/docs/week3/images/Pasted%20image%2020220707223246.png)
    - 추출된 feature 들을 가지고 clustering 을 수행하여 cluster center 인 codeword 를 찾아냄 
 
 2. Codebook generation
@@ -30,9 +30,9 @@
 
    - 각각의 이미지들을 codeword들의 histogram 으로 표현함
    - image 하나당 하나의 histogram이 나오며 이 히스토그램의 크기는 codebook의 크기(codeword들의 개수)와 동일하다.
-     ![[Pasted image 20220708104644.png]]
+     ![image4](https://github.com/Jungduri/ml-study/blob/week3/docs/week3/images/Pasted%20image%2020220708104644.png)
 
-   ![[Pasted image 20220707220812.png]]
+   ![image5](https://github.com/Jungduri/ml-study/blob/week3/docs/week3/images/Pasted%20image%2020220707220812.png)
 
    - 이 Histogram 이 2D Image 를 표현하는 1D Vector 가 되는 것임. (== Feature Vector)
 
@@ -41,11 +41,11 @@
    - **Learning**
      - Unsupervised Learning 인 Naive Bayes 확률을 이용한 방법
        - class 별 histogram 값을 확률로서 해석하여 물체를 분류
-       - ![[스크린샷 2022-07-07 오후 10.56.07.png]]
+       - ![image6](https://github.com/Jungduri/ml-study/blob/week3/docs/week3/images/스크린샷%202022-07-07%20오후%2010.56.07.png)
      - Supervised Learning 인 SVM 과 같은 Classifier 을 이용한 방법
        - 1D vector 로 표현된 Histogram 값을 feature vector로 보고 SVM 에 넣어 decision boundary 를 추출해냄.
        - 이를 통해 학습 데이터 간의 decision boundary 를 찾게 된다면 test scene의 class 도 분류할 수 있게 될 것임.
-         ![[Pasted image 20220708130526.png]]
+         ![image7](https://github.com/Jungduri/ml-study/blob/week3/docs/week3/images/Pasted%20image%2020220708130526.png)
    - **Recognition**
      - Test Image 의 feature 추출 (using SIFT)
      - Train dataset 으로 생성된 Codebook 과 Test Feature 들을 비교해 Histogram 생성(가장 유사한 Image 에 bin을 가장 높게)
@@ -72,7 +72,7 @@ https://mingtory.tistory.com/88
       ![[Pasted image 20220708121725.png]]
       계곡 사진을 보고 이 사진의 중심은 결국 계곡인데, 숲으로 판단할 수도 있는 것
   - 이러한 문제를 극복하기 위해 image 를 분할해 각 분면마다 BOF 를 적용하는 것
-    ![[Pasted image 20220708121841.png]]
+    ![image8](https://github.com/Jungduri/ml-study/blob/week3/docs/week3/images/Pasted%20image%2020220708121841.png)
   - 이렇게 나온 vector를 Histogram Vector 대신에 사용하여 local 정보도 가져갈 수 있게 하는 것.
 
 
