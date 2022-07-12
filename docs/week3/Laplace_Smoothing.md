@@ -49,10 +49,8 @@ $$P(j|d_5)=P(j)P(Beijing|j)P(Beijing|j)P(tokyo|j)P(macao|j)$$
 $$=\frac{1}{4} \cdot \frac{0}{3} \cdot \frac{0}{3} \cdot \frac{1}{3} \cdot \frac{0}{3} = 0$$
 - Test 5 with Laplace Smoothing $\alpha =1$
 $$P(c|d_5)=P(c)P(Beijing|c)P(Beijing|c)P(tokyo|c)P(macao|c)$$
-$$=\frac{3}{4} \cdot \frac{1+1}{8+6*1} \cdot \frac{1+1}{8+6*1} \cdot \frac{1+1}{8+6*1} \cdot \frac{1+1}{8+6*1}$$
+$$=\frac{3}{4} \cdot \frac{1+1}{8+6 \* 1} \cdot \frac{1+1}{8+6 \* 1} \cdot \frac{1+1}{8+6 \* 1} \cdot \frac{1+1}{8+6 \* 1}$$
 $$= 0.00031237$$
 $$P(j|d_5)=P(j)P(Beijing|j)P(Beijing|j)P(tokyo|j)P(macao|j)$$
-$$=\frac{1}{4} \cdot$$
-$$\frac{0+1}{3+1*6}$$
-$$\cdot \frac{0+1}{3+1*6} \cdot \frac{1+1}{3+1*6} \cdot \frac{0+1}{3+1*6}$$
+$$=\frac{1}{4} \cdot \frac{0+1}{3+1 \* 6} \cdot \frac{0+1}{3+1 \* 6} \cdot \frac{1+1}{3+1 \* 6} \cdot \frac{0+1}{3+1 \* 6}$$
 $$= 0.00007621$$
