@@ -4,10 +4,10 @@
 	 (bayes theorem)
 	 $$= argmax_{Y=y} \quad P(X=x|Y=y) \ P(Y=y)$$
 	 
- - Naive Bayes Classifier
-  	$$ argmax_{Y=y} \quad P(X=x|Y=y) \ P(Y=y)$$
- 	(condition independce assumption)
- 	$$=argmax_{Y=y} \  P(Y=y)\prod _{i}P(X_{i}=x_{i}|Y=y) \ $$
+- Naive Bayes Classifier
+	 $$ argmax_{Y=y} \quad P(X=x|Y=y) \ P(Y=y)$$
+ 	 (condition independce assumption)
+	 $$=argmax_{Y=y} \  P(Y=y)\prod _{i}P(X_{i}=x_{i}|Y=y) \ $$
 	 - Problem_1 : Naive assumption, 현실에는 너무 많은 유기적인 사건이 존재
 	 - Problem_2: Incorrect Probability Estimation, 관측하지 못한 경우 MLE는 0이 되고, MAP는 prior를 측정하기에 부족한 조건  
 
