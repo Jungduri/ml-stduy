@@ -48,9 +48,10 @@ $$
 * 딥러닝을 이용한 생성 모델
 
 ![img2](./generative_models.png)
-	-   Tractable Density : 데이터 X를 보고 확률분포를 ‘직접’ 구하는 방법
-	-   Approximate Density: 데이터 X를 보고 확률분포를 ‘추정’하는 방법
-	-   Implicit Density : 데이터 X의 분포를 몰라도 되는 방법
+
+*   Tractable Density : 데이터 X를 보고 확률분포를 ‘직접’ 구하는 방법
+*   Approximate Density: 데이터 X를 보고 확률분포를 ‘추정’하는 방법
+*   Implicit Density : 데이터 X의 분포를 몰라도 되는 방법
 
 
 ---
