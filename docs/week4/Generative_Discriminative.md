@@ -17,7 +17,7 @@
 	* 비확률적 모델 
 		* 각각의 입력값  $\mathbf{x}$를 클래스에 사상하는 판별함수 $f(x)$를 찾는다. 예를 들어 두개의 클래스를 가진 문제의 경우에$f(\dot{})$은 $f=0$일때 $C_0$, $f=1$일때 $C_1$을 표현 할 수 있다. 이때는 확률론이 사용되지 않음.
 
-![img1][(./generative_vs_discriminative.png)
+![img1](./generative_vs_discriminative.png)
 
 ### 확률적 생성모델
 * _generative model_이란 데이터 $\mathbf{x}$가 생성되는 과정을 두 개의 확률모형, 즉  $p(C_k)$,  $p(\mathbf{x}|C_k)$으로 정의하고, 베이즈룰을 사용해 $p(C_k | \mathbf{x})$를 간접적으로 도출하는 모델을 가리킴
@@ -47,7 +47,7 @@ $$
 > 위 함수를 정규화된 지수 함수(normalized exponectial function)이라고 함. 혹은 익숙한 말로는 softmax function이라고 하는데,  이는 모든 평활화(normalized) 중에서 최대값을 가장 두드러지게 표현해주기 때문(exp의 특성)
 * 딥러닝을 이용한 생성 모델
 
-![img2][./generative_models.png]]
+![img2](./generative_models.png)
 	-   Tractable Density : 데이터 X를 보고 확률분포를 ‘직접’ 구하는 방법
 	-   Approximate Density: 데이터 X를 보고 확률분포를 ‘추정’하는 방법
 	-   Implicit Density : 데이터 X의 분포를 몰라도 되는 방법
