@@ -21,7 +21,7 @@
     - P($x_1, ..., x_j$)
       - 주변 확률(=개별 사건의 확률)
   - Bag of Words
-    - ![bag_of_words](./bagofwords.jpeg)
+    - ![bag_of_words](./Gaussian_Naive_Bayes/bagofwords.jpeg)
 
   - Naive Bayes에서 가능한 각 클래스에 대해 샘플의 사후 확률을 비교 
   - 비교를 진행하는 동안 주변 확률이 일정하기 때문에 각 클래스에 대한 사후 확률의 분자를 비교
@@ -51,11 +51,11 @@
 - feature가 연속형 변수일 때 가장 널리 사용하는 방법
 - 따라서 모델을 만들 때 데이터가 가우시안 분포(Gaussian Distribution)를 따른다고 가정
 - Gaussian Distribution
-  - ![gaussian_distribution](./gaussian_distribution.png)
+  - ![gaussian_distribution](./Gaussian_Naive_Bayes/gaussian_distribution.png)
 - 클래스 $y$의 샘플이 주어졌을 때, 특성값 x의 likelihood가 다음과 같은 정규분포를 따른다고 가정
-- ![gaussian_NB](./gaussian_NB.png)
+- ![gaussian_NB](./Gaussian_Naive_Bayes/gaussian_NB.png)
 - 여기서 $\sigma_{y}^{2}$와 $\mu_{y}$는 클래스 y에 대한 특성 $x_j$의 분산과 평균
-- ![gaussian_naive_bayes](./GNB.png)
+- ![gaussian_naive_bayes](./Gaussian_Naive_Bayes/GNB.png)
   - 모든 데이터 포인트에서 해당 포인트와 각 클래스 평균 사이의 z-score를 계산하여 판단
   - z-score = $Z= \frac{X-\mu}{\sigma}$
   - 즉 클래스의 평균으로부터 거리를 해당 클래스의 표준 편차로 나눈 값으로 계산 
@@ -70,7 +70,7 @@
 - 이산적인 특성이나 범주형 데이터가 주어졌을 때 사용하는 **다항분포**를 이용한 방법
 - Gaussian Naive Bayes와 비슷하게 작동하지만 특성이 다항 분포라고 가정
 - Multinomial Naive Bayes가 가장 많이 사용되는 경우 중 하나는 BoW(bag of words) 즉, 단어를 벡터 수로 나타내는 문제  
-- ![multinomial_naive_bayes](./multinomial_distribution.png)
+- ![multinomial_naive_bayes](./Gaussian_Naive_Bayes/multinomial_distribution.png)
 - relative frequency(상대 빈도) 계산 
 - $\hat{\theta_{yi}} = \frac{N_{ui}+\alpha}{N_y + \alpha n}$
   - 각 클래스 $y$를 위한 vector $\theta_y = (\theta_{y1}, ..., \theta_{yn})$에 의해 매개변수화
@@ -96,11 +96,11 @@
 - 또한 텍스트 분류 작업에서 Multinomial NB의 성능을 능가함 
 - 가중치 계산 절차는 다음과 같음 
   - 기본식에 각 $N$마다 가중치를 적용하여 밸런스를 맞춤
-  - ![CNB](./CNB.png)
+  - ![CNB](./Gaussian_Naive_Bayes/CNB.png)
   - 여기서 $\sum$은 클래스 c에 없는 모든 document $j$에 대한 것이고, $d_{ij}$는 document $j$에 있는 term $i$의 갯수 값, $\alpha_i$는 Multinomial NB에서 적용하였던 smoothing hyperparameter이고 $\alpha$는 $\sum_{i}\alpha_i$ 
 - 두번째 정규화는 Multinomial NB에서 longer document가 매개변수 추정치를 지배하는 경향을 해결
   - $\hat{c} = argmin_{c}\sum_{i}t_i w_{ci}$
-- ![CNB_paper](./CNB_paper.png)
+- ![CNB_paper](./Gaussian_Naive_Bayes/CNB_paper.png)
   - https://people.csail.mit.edu/jrennie/papers/icml03-nb.pdf
 
 ---
@@ -112,7 +112,7 @@
 - Multinomial Naive Bayes와 비슷하게 텍스트 분류에 주로 사용
 - 이러한 특성 행렬은 한 문서에 어떤 단어가 등장하는지 여부를 담음
 - 추가적으로 smoothing을 적용할 수 있는 매개변수 alpha 값이 존재
-- ![bernoulli](./Bernoulli.png)
+- ![bernoulli](./Gaussian_Naive_Bayes/Bernoulli.png)
 - $P(x_i \mid y) = P(i \mid y) x_i + (1 - P(i \mid y)) (1 - x_i)$
   - 이는 클래스 $y$에 대한 지표인 feature $i$에 대해 non-occurrence(비발생)이 일어나면 명시적으로 패널티를 부과
     - Multinomial NB는 발생하지 않는 feature를 그냥 무시
@@ -135,9 +135,9 @@
   - $n_i$는 사용가능한 featre category의 수
 - Multinomial NB와의 차이점 : MNB는 단순 범주형 변수, Categorical NB는 범주형 변수는 확률이 있는 범주의 값을 취함 
   - Multinomial features
-  - ![multinomial_feature](./multinomial_features.png)
+  - ![multinomial_feature](./Gaussian_Naive_Bayes/multinomial_features.png)
   - Categorical features
-  - ![categorical_feature](./categorical_feature.png)
+  - ![categorical_feature](./Gaussian_Naive_Bayes/categorical_feature.png)
 
 
 ---
@@ -145,9 +145,9 @@
 ### Further
 
 - Classifier Comparison
-- ![classifier_comparaison](./classifier_comparison.png)
+- ![classifier_comparaison](./Gaussian_Naive_Bayes/classifier_comparison.png)
   - Nearest Neighbors / Linear SVM / RBF SVM / Gaussian Process / Decision Tree / Random Forest / Neural Net / AdaBoost / Naive Bayes / QDA 
-- ![classifier_comparaison2](./classifier_comparison2.png)
+- ![classifier_comparaison2](./Gaussian_Naive_Bayes/classifier_comparison2.png)
 - [Logistic Regression vs Naive Bayes](https://www.educba.com/naive-bayes-vs-logistic-regression/)
 
 
