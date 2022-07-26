@@ -52,9 +52,15 @@
 - 따라서 모델을 만들 때 데이터가 가우시안 분포(Gaussian Distribution)를 따른다고 가정
 - Gaussian Distribution
   - ![gaussian_distribution](./Gaussian_Naive_Bayes/gaussian_distribution.png)
-- 클래스 $y$의 샘플이 주어졌을 때, 특성값 x의 likelihood가 다음과 같은 정규분포를 따른다고 가정
-- ![gaussian_NB](./Gaussian_Naive_Bayes/gaussian_NB.png)
-- 여기서 $\sigma_{y}^{2}$와 $\mu_{y}$는 클래스 y에 대한 특성 $x_j$의 분산과 평균
+
+- 가우시안 분포란 평균이 $\mu$이고 분산이 $\sigma^{2}$일 때 아래 식을 만족함 
+  - ![gaussian_NB](https://latex.codecogs.com/png.image?\dpi{110}%20N(\mu,%20\sigma^2)%20=%20\frac{1}{\sqrt{2%20\pi%20\sigma^{2}_{y}}}%20e^{-%20\frac{(x_{j}-\mu_{y})^{2}}{2%20\sigma^{2}_{y}}})
+- 클래스 $y$의 샘플이 주어졌을 때 특성 값 $x_j$의 likelihood는 다음과 같으며
+  - $p(x \mid y_k) = \mathcal {N}(\mu_{kj}, \sigma^{2}_{kj})$
+- Gaussian Naive Bayes 분류기는 아래와 같음 
+  - ![gaussian_NB2](https://latex.codecogs.com/png.image?\dpi{110}%20h(x)%20=%20\underset{k%20\in%20\mathcal%20{Y}}{argmax}%20\%20P(y_k)%20\prod^n_{j=1}%20\mathcal%20{N}%20(\mu_{kj},%20\sigma^2_{kj}))
+
+
 - ![gaussian_naive_bayes](./Gaussian_Naive_Bayes/GNB.png)
   - 모든 데이터 포인트에서 해당 포인트와 각 클래스 평균 사이의 z-score를 계산하여 판단
   - z-score = $Z= \frac{X-\mu}{\sigma}$
