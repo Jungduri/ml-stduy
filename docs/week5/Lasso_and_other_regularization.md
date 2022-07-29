@@ -16,8 +16,8 @@
 : 가중치의 절대값의 합이 최소가 되는 방향으로 MSE가 최소가 될 수 있도록 하는 방법.
 - 따라서, 가중치의 모든 원소가 0이 되거나 0에 가깝다는 방향으로 가야하고, 그에 기초해L-1-norm의 특징을 가진다.
 - 목적함수, 제약조건: 
-	-  $\hat\beta=argmin_\beta(y=X\beta)^T(y-X\beta), s.t.||\beta||<t$
-		= $argmin_\beta\{\sum{(y_i-x_i\beta)^2}+\lambda\sum|\beta_j|\}$
+	-  $\hat\beta=argmin_\beta(y=X\beta)^T(y-X\beta), s.t.\|\|\beta\|\|\lt{t}$
+	$=argmin_\beta\{\sum{(y_i-x_i\beta)^2}+\lambda\sum|\beta_j|\}$
 - lasso식은 L1-norm은 미분이 불가능하기 때문에 closed from solution 불가능
 	- Neumerical optimization methods
 		- Quardratic programming techniques
