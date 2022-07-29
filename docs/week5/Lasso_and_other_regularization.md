@@ -9,7 +9,7 @@
 - MSE(평균제곱오차)를 최소화하여 최적의 $w,b$를 찾을 수 있다.
 - $MSE=\frac{1}{n}\sum{(y-\hat y)}^2$
 - $argmin_{w,b}\frac{1}{n}\sum{(y-\hat y)}^2$
-- 하지만, 위를 통해서 최적의 $w,b$를 찾을때, 필요이상으로 데이터의 경향을 따라가게 되면, overfitting이 생길 수 있고, 이를 해결하기 위한 방법에는 Lasso와 Ridge가 있다.
+- 하지만, 위를 통해서 최적의 $w,b$를 찾을때, 필요이상으로 데이터의 경향을 따라가게 되면, overfitting이 생길 수 있고, 이를 규제(regularization)하여 해결하는 방법으로 Lasso와 Ridge가 있다.
 
 ### Lasso Regrssion
 (Least Absolute Shrinkage and Selection Operator)
