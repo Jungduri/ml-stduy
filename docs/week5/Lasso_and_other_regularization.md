@@ -31,7 +31,7 @@
 
 ### Ridge
 : Lasso의 L1-norm penalty대신에 L2-norm penalty사용
-- MSE + penalty = MSE + $\alpha$L1-norm $=\frac{1}{n}\sum{(y-\hat y)}^2+\lambda\sum{||w||}$
+- MSE + penalty = MSE + $\alpha$L1-norm $=\frac{1}{n}\sum{(y-\hat y)^2}+\lambda\sum{||w||}$
 - 미분이 가능하기 때문에 closed from solution이 있다.
 
 ### Lasso와 Ridge
