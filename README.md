@@ -6,7 +6,7 @@ https://aai.kaist.ac.kr/xe2/courses
 
 ## Contributors
 
-TBA
+jungduri, gwleeee, nalinear, eehoeskrap, eric9687, SoyeongChoi
 
 ## Schedule
 
@@ -17,10 +17,11 @@ TBA
 |3| Naive Bayes Classifier | 71 | eric9687 / SoyeongChoi |
 |4-1| Logistic Regression Classifier - 1 | 68 | jungduri / gwleeee |
 |4-2| Logistic Regression Classifier - 2 | 53 | nalinear / eehoeskrap |
-|5| Support Vector Machine Classifier | 117 | TBD |
-|6| Training/Testing and Regularization | 102 | TBD |
-|7| Bayesian Network - (1-4) | 67 | TBD |
-|8| Bayesian Network - (5-9) | 64 | TBD |
+|5-1| Support Vector Machine Classifier | 67 | eric9687, SoyeongChoi |
+[5-2] Support Vector Machine Classifier | 50 | eehoeskrap, gwleeee |
+|6| Training/Testing and Regularization | 102 | jungduri, nalinear |
+|7| Bayesian Network - (1-4) | 67 | eric9687, SoyeongChoi |
+|8| Bayesian Network - (5-9) | 64 |  |
 |9| K-Means Clustering and Gaussian Mixture Model - (1-4) | 61 | TBD |
 |10| K-Means Clustering and Gaussian Mixture Model - (5-9) | 78 | TBD |
 |11| Hidden Markov Model | 108 | TBD |
