@@ -1,7 +1,9 @@
+
 # ml-study
 
 카이스트 산업및시스템공학과 문일철 교수님의 
 Introduction to Artificial Intelligence/Machine Learning 스터디를 위한 레포입니다.
+
 https://aai.kaist.ac.kr/xe2/courses
 
 ## Contributors
@@ -9,6 +11,7 @@ https://aai.kaist.ac.kr/xe2/courses
 jungduri, gwleeee, nalinear, eehoeskrap, eric9687, SoyeongChoi
 
 ## Schedule
+
 
 | Weeks | Subject                                               | Duration | Assignee               |
 | ----- | ----------------------------------------------------- | -------- | ---------------------- |
@@ -27,3 +30,4 @@ jungduri, gwleeee, nalinear, eehoeskrap, eric9687, SoyeongChoi
 | 11    | Hidden Markov Model                                   | 108      | TBD                    |
 | 12    | Sampling Based Inference - (1-5)                      | 97       | TBD                    |
 | 13    | Sampling Based Inference - (6-10)                     | 97       | TBD                    |
+
